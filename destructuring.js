@@ -23,7 +23,7 @@ var carDetails = {
 
 //Code Here
 
-
+let {color, make, model, year} = carDetails
 
 ////////// PROBLEM 2 //////////
 
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+    var {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,7 +55,11 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function totalPopulation( obj ){
+  const {utah, california, texas, arizona} = obj;
+  var sum = (utah + california + texas + arizona);
+  return sum
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -69,9 +73,15 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients( obj ){
+  let {carb, fat, protein} = obj;
+  var arr = [];
+   arr.push(carb, fat, protein)
 
+    return arr
+}
 
-////////// PROBLEM 5 //////////
+////////// PROBLEM 5  //////////
 
 /*
   Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
@@ -87,8 +97,17 @@ function greeting( obj ) {
 
 //Code Here
 
-
-
+function largeNumbers({first, second, third}){
+  if ( first <= second  && first <= third ){
+    return first
+    }
+    if ( second <= first && second <= third ){
+    return second
+    }
+      if ( third <= first && third <= second ){
+    return third 
+    }
+  }
 ////////// PROBLEM 6 //////////
 
 /*
@@ -99,4 +118,26 @@ function greeting( obj ) {
 
 //Code Here
 
+// function numberGroups({a, b, c}){
+//   let arrays = [a, b, c]
+//   let longest = [];
+  
+//     arrays.forEach((arr, i) => {
+//     if(arr.length > longest.length){
+//       longest.push(arr);
+//     }
+//   })
+//   return longest;
+// }
 
+function numberGroups({a, b, c}){
+  if ( a >= b  && a >= c ){
+    return a
+    }
+    if ( b >= a && b >= c ){
+    return b
+    }
+      if ( c >= a && c >= b ){
+    return c 
+    }
+}
